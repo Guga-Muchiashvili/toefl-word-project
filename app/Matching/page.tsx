@@ -1,7 +1,8 @@
+import MakeQuiz from "@/components/MakeQuiz/MakeQuiz";
 import React from "react";
 
 const MatchingQuiz = () => {
-  return <div>MatchingQuiz</div>;
+  return <MakeQuiz quizType="matching" />;
 };
 
 export default MatchingQuiz;
