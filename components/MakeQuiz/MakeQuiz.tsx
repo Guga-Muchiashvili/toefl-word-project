@@ -16,6 +16,7 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   const [showAnswers, setShowAnswers] = useState<boolean>(false);
 
   const router = useRouter();
+
   useEffect(() => {
     const createQuiz = () => {
       const questions = generateQuizQuestions(quizType);
@@ -56,50 +57,68 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   };
 
   return (
-    <div className="w-full h-screen text-purple-600 font-bebas flex items-center justify-center flex-col">
-      {quizQuestions.length === 0 ? (
-        <p>No questions available. Please select lessons.</p>
-      ) : (
-        <div className="flex gap-5 flex-col flex-wrap w-full h-screen justify-start py-6 items-center">
-          {quizQuestions.map((question, index) => (
-            <div className="w-fit text-3xl h-fit" key={index}>
-              <p>{question.questionText.question}</p>
-              <div className="flex items-center gap-4">
-                {question.questionText.options.map((option) => {
-                  const isCorrect = option === question.questionText.answer;
-                  const isSelected = option === selectedOptions[index];
-                  let bgColor = "bg-white";
+    <div className="min-h-screen bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center py-10">
+      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-4xl">
+        <h1 className="text-4xl font-bold text-purple-600 text-center mb-6">
+          {quizType} Quiz
+        </h1>
+        {quizQuestions.length === 0 ? (
+          <p className="text-center text-xl text-gray-600">
+            No questions available. Please select lessons.
+          </p>
+        ) : (
+          <div className="space-y-6">
+            {quizQuestions.map((question, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 p-6 rounded-lg shadow-md space-y-4"
+              >
+                <p className="text-2xl font-semibold text-purple-600">
+                  {index + 1}. {question.questionText.question}
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  {question.questionText.options.map((option) => {
+                    const isCorrect = option === question.questionText.answer;
+                    const isSelected = option === selectedOptions[index];
+                    let bgColor = "bg-white";
 
-                  if (showAnswers) {
-                    if (isCorrect) bgColor = "bg-green-600 text-white";
-                    else if (isSelected) bgColor = "bg-red-600 text-white";
-                  } else if (isSelected) {
-                    bgColor = "bg-purple-600 text-white";
-                  }
+                    if (showAnswers) {
+                      if (isCorrect) bgColor = "bg-green-500 text-white";
+                      else if (isSelected) bgColor = "bg-red-500 text-white";
+                    } else if (isSelected) {
+                      bgColor = "bg-purple-600 text-white";
+                    }
 
-                  return (
-                    <div
-                      className={`w-32 px-2 h-10 mt-2 flex items-center cursor-pointer justify-center rounded-xl text-xl shadow-xl border-[1px] ${bgColor} border-purple-600`}
-                      key={option}
-                      onClick={() => handleOptionClick(index, option)}
-                    >
-                      {option}
-                    </div>
-                  );
-                })}
+                    return (
+                      <div
+                        key={option}
+                        className={`w-40 px-4 py-2 text-center rounded-xl text-purple-600 text-lg font-medium cursor-pointer shadow-md border transition-all duration-200 hover:shadow-lg ${bgColor} ${
+                          showAnswers || isSelected
+                            ? "cursor-default"
+                            : "hover:bg-purple-100"
+                        }`}
+                        onClick={() => handleOptionClick(index, option)}
+                      >
+                        {option}
+                      </div>
+                    );
+                  })}
+                </div>
+                {showAnswers &&
+                  selectedOptions[index] !== question.questionText.answer && (
+                    <p className="text-red-500 text-lg mt-2">
+                      Correct answer: {question.questionText.answer}
+                    </p>
+                  )}
               </div>
-              {showAnswers &&
-                selectedOptions[index] !== question.questionText.answer && (
-                  <p className="text-red-500 text-lg mt-2">
-                    Correct answer: {question.questionText.answer}
-                  </p>
-                )}
-            </div>
-          ))}
+            ))}
+          </div>
+        )}
+        <div className="mt-8 flex flex-col items-center">
           <button
-            className={`mt-4 px-6 py-2 text-xl rounded-xl shadow-lg ${
+            className={`px-8 py-3 text-xl rounded-xl font-bold shadow-lg transition-all duration-200 ${
               showAnswers
-                ? "bg-gray-200 cursor-not-allowed"
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-purple-600 text-white hover:bg-purple-800"
             }`}
             onClick={handleSubmit}
@@ -108,20 +127,20 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
             {showAnswers ? "Submitted" : "Submit"}
           </button>
           {score !== null && (
-            <div className="mt-4 text-2xl text-green-600">
+            <div className="mt-4 text-2xl text-green-600 font-semibold">
               Your score: {score} / {quizQuestions.length}
             </div>
           )}
           {showAnswers && (
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-6 mt-6">
               <button
-                className="px-6 py-2 text-xl  shadow-lg bg-blue-600 text-white rounded-xl hover:bg-blue-800"
+                className="px-6 py-2 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-800 transition-all duration-200"
                 onClick={handleRestart}
               >
                 Restart Quiz
               </button>
               <button
-                className="px-6 py-2 text-xl rounded-xl shadow-lg bg-gray-600 text-white hover:bg-gray-800"
+                className="px-6 py-2 bg-gray-600 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200"
                 onClick={handleGoBack}
               >
                 Go Back
@@ -129,7 +148,7 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
             </div>
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
