@@ -1,9 +1,9 @@
 "use client";
 
-import { Question } from "@/common/types";
+import { Test } from "@/common/types";
 import { data } from "@/data";
 
-export const generateQuizQuestions = (quizType: string): Question[] => {
+export const generateQuizQuestions = (quizType: string) => {
   const checkedLessons: string[] = JSON.parse(
     sessionStorage.getItem("checkedLessons") || "[]"
   );
@@ -12,7 +12,7 @@ export const generateQuizQuestions = (quizType: string): Question[] => {
     checkedLessons.includes(lesson.lessonName)
   );
 
-  const quizQuestions: Question[] = [];
+  const quizQuestions: Test[] = [];
 
   const shuffleArray = <T>(arr: T[]): T[] =>
     arr.sort(() => Math.random() - 0.5);
@@ -20,14 +20,10 @@ export const generateQuizQuestions = (quizType: string): Question[] => {
   selectedLessons.forEach((lesson) => {
     const { tests } = lesson;
 
-    if (quizType === "matching" && tests.matching) {
-      quizQuestions.push(
-        ...tests.matching.map((match) => ({ questionText: match }))
-      );
-    } else if (quizType === "questions" && tests.questions) {
-      quizQuestions.push(
-        ...tests.questions.map((question) => ({ questionText: question }))
-      );
+    if (quizType === "matching" && tests?.matching) {
+      quizQuestions.push(...tests.matching);
+    } else if (quizType === "questions" && tests?.questions) {
+      quizQuestions.push(...tests.questions);
     }
   });
 

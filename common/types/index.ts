@@ -1,17 +1,32 @@
 export interface Question {
   questionText: {
     question: string;
-    options: string[]; // Array of possible answers
-    answer: string; // The correct answer
+    options: string[];
+    answer: string;
   };
 }
 
-export interface Test {
-  matching?: string[];
-  questions?: string[];
-}
+export type Word = {
+  word: string;
+  adj?: string;
+  adv?: string;
+  n?: string | string[];
+  v?: string;
+  syn: string[];
+  examples: string[];
+};
 
-export interface Lesson {
+export type Test = {
+  question: string;
+  options: string[];
+  answer: string;
+};
+
+export type Lesson = {
   lessonName: string;
-  tests: Test;
-}
+  words: Word[];
+  tests?: {
+    matching?: Test[];
+    questions?: Test[];
+  };
+};

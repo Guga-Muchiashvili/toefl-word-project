@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { generateQuizQuestions } from "@/actions/createData";
-import { Question } from "@/common/types";
+import { Test } from "@/common/types";
 import React, { useState, useEffect } from "react";
 
 interface MakeQuizProps {
@@ -10,7 +10,7 @@ interface MakeQuizProps {
 }
 
 const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
-  const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
+  const [quizQuestions, setQuizQuestions] = useState<Test[]>([]);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [score, setScore] = useState<number | null>(null);
   const [showAnswers, setShowAnswers] = useState<boolean>(false);
@@ -20,6 +20,7 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   useEffect(() => {
     const createQuiz = () => {
       const questions = generateQuizQuestions(quizType);
+      console.log(questions);
       setQuizQuestions(questions);
       setSelectedOptions(Array(questions.length).fill(""));
     };
@@ -38,7 +39,7 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   const handleSubmit = () => {
     let calculatedScore = 0;
     quizQuestions.forEach((question, index) => {
-      if (selectedOptions[index] === question.questionText.answer) {
+      if (selectedOptions[index] === question.answer) {
         calculatedScore++;
       }
     });
@@ -74,11 +75,11 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
                 className="bg-gray-100 p-6 rounded-lg shadow-md space-y-4"
               >
                 <p className="text-2xl font-semibold text-purple-600">
-                  {index + 1}. {question.questionText.question}
+                  {index + 1}. {question.question}
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  {question.questionText.options.map((option) => {
-                    const isCorrect = option === question.questionText.answer;
+                  {question.options.map((option) => {
+                    const isCorrect = option === question.answer;
                     const isSelected = option === selectedOptions[index];
                     let bgColor = "bg-white";
 
@@ -104,12 +105,11 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
                     );
                   })}
                 </div>
-                {showAnswers &&
-                  selectedOptions[index] !== question.questionText.answer && (
-                    <p className="text-red-500 text-lg mt-2">
-                      Correct answer: {question.questionText.answer}
-                    </p>
-                  )}
+                {showAnswers && selectedOptions[index] !== question.answer && (
+                  <p className="text-red-500 text-lg mt-2">
+                    Correct answer: {question.answer}
+                  </p>
+                )}
               </div>
             ))}
           </div>

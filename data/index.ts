@@ -152,7 +152,7 @@ export const data = [
         adv: "disruptively",
         syn: ["disturbing"],
         examples: [
-          "Frequent questions during lectures can be disruptive.",
+          "Frequent thoughts during lectures can be disruptive.",
           "The storm caused a disruption in bus service.",
         ],
       },
@@ -1505,9 +1505,9 @@ export const data = [
         word: "appropriate",
         pos: "adj",
         definition: "correct or good for the purpose",
-        synonyms: ["proper"],
+        syn: ["proper"],
         examples: [
-          "It is not appropriate to cheat on tests.",
+          "It is not appropriate to cheat on exams.",
           "She was dressed appropriately in a suit for the job interview.",
         ],
       },
@@ -1515,7 +1515,7 @@ export const data = [
         word: "clarify",
         pos: "v",
         definition: "to make more easily understood, to make clear",
-        synonyms: ["explain"],
+        syn: ["explain"],
         examples: [
           "Chapter 2 in the textbook clarifies the process of osmosis.",
           "A clarification of the government's position on this matter is necessary.",
@@ -1525,7 +1525,7 @@ export const data = [
         word: "conceal",
         pos: "v",
         definition: "to prevent from being seen or discovered",
-        synonyms: ["hide"],
+        syn: ["hide"],
         examples: [
           "The students concealed their feelings about the course.",
           "His concealment of the evidence made his case more difficult to prove.",
@@ -1535,7 +1535,7 @@ export const data = [
         word: "confirm",
         pos: "v",
         definition: "to make certain, give support",
-        synonyms: ["prove"],
+        syn: ["prove"],
         examples: [
           "The director confirmed that the meeting would be on the tenth.",
           "We have just received confirmation of your reservation on the flight to Los Angeles.",
@@ -1545,9 +1545,9 @@ export const data = [
         word: "constantly",
         pos: "adv",
         definition: "in an unchanging manner; happening all the time",
-        synonyms: ["continually"],
+        syn: ["continually"],
         examples: [
-          "Philosophy constantly questions the nature of human existence.",
+          "Philosophy constantly thinks about the nature of human existence.",
           "The speed of light is constant at 186,000 miles a second.",
         ],
       },
@@ -1555,7 +1555,7 @@ export const data = [
         word: "convenient",
         pos: "adj",
         definition: "easy to reach, near; suitable to one's needs",
-        synonyms: ["practical"],
+        syn: ["practical"],
         examples: [
           "The student union is convenient to the physical sciences building.",
           "For the convenience of the student body, the library is located in a central location.",
@@ -1565,7 +1565,7 @@ export const data = [
         word: "core",
         pos: "adj",
         definition: "the central or most important part",
-        synonyms: ["chief"],
+        syn: ["chief"],
         examples: [
           "The core of the curriculum consists of courses that are required of all students.",
           "They are loyal to the core.",
@@ -1575,7 +1575,7 @@ export const data = [
         word: "critical",
         pos: "adj",
         definition: "very serious or requiring careful judgment; finding fault",
-        synonyms: ["dangerous"],
+        syn: ["dangerous"],
         examples: [
           "It is critical to follow the directions for the experiment exactly as the instructor indicates.",
           "The runner accepted criticism from his coach very well.",
@@ -1586,7 +1586,7 @@ export const data = [
         pos: "v",
         definition:
           "to change from the original shape or condition, usually in an unnatural way",
-        synonyms: ["deform"],
+        syn: ["deform"],
         examples: [
           "Time and space are distorted when traveling at the speed of light.",
           "Distortion of the image from a microscope can be caused by low light.",
@@ -1596,7 +1596,7 @@ export const data = [
         word: "diverse",
         pos: "adj",
         definition: "various; distinct from others",
-        synonyms: ["different"],
+        syn: ["different"],
         examples: [
           "Freud had many diverse interests in psychology.",
           "The diversity of life forms on Earth makes zoology an interesting area of study.",
@@ -1606,7 +1606,7 @@ export const data = [
         word: "prosperous",
         pos: "adj",
         definition: "successful, wealthy",
-        synonyms: ["thriving"],
+        syn: ["thriving"],
         examples: [
           "In the early 1900s, San Francisco was a prosperous city.",
           "Bacteria prosper under the proper conditions.",
@@ -1616,7 +1616,7 @@ export const data = [
         word: "purposefully",
         pos: "adv",
         definition: "done for a special reason",
-        synonyms: ["deliberately"],
+        syn: ["deliberately"],
         examples: [
           "The course syllabus was designed purposefully to be easy to follow.",
           "He was authorized to spend the money for business purposes.",
@@ -1626,7 +1626,7 @@ export const data = [
         word: "reveal",
         pos: "v",
         definition: "to uncover, to expose",
-        synonyms: ["disclose"],
+        syn: ["disclose"],
         examples: [
           "The president revealed some of his ideas before he gave his speech.",
           "The report made some revelations about the nature of the conflict.",
@@ -1636,7 +1636,7 @@ export const data = [
         word: "scarcely",
         pos: "adv",
         definition: "almost not",
-        synonyms: ["hardly"],
+        syn: ["hardly"],
         examples: [
           "The woman scarcely spoke a word of English.",
           "Due to a scarcity of water, a rationing plan was established.",
@@ -1646,7 +1646,7 @@ export const data = [
         word: "theoretically",
         pos: "adv",
         definition: "according to a reasoned, but not proven, point of view",
-        synonyms: ["hypothetically"],
+        syn: ["hypothetically"],
         examples: [
           "Leonardo da Vinci theorized that the Earth was not the center of the universe.",
           "His argument was theoretically appealing but not realistic.",
@@ -2654,14 +2654,14 @@ export const data = [
         word: "benefit",
         pos: "v",
         meaning: "to be useful or helpful",
-        synonyms: ["assist"],
+        syn: ["assist"],
         examples: ["Use of solar power will benefit all mankind."],
       },
       {
         word: "blind",
         pos: "adj",
         meaning: "unable to see or understand",
-        synonyms: ["unaware"],
+        syn: ["unaware"],
         examples: [
           "They were blind to the fact that they had little chance to succeed.",
         ],
@@ -2670,7 +2670,7 @@ export const data = [
         word: "broaden",
         pos: "v",
         meaning: "to make larger or greater",
-        synonyms: ["enlarge"],
+        syn: ["enlarge"],
         examples: [
           "Education will broaden your opportunities to find a good job.",
         ],
@@ -2679,14 +2679,14 @@ export const data = [
         word: "burgeon",
         pos: "v",
         meaning: "to grow at a fast pace",
-        synonyms: ["thrive"],
+        syn: ["thrive"],
         examples: ["His talent as a pianist burgeoned at the age of 14."],
       },
       {
         word: "conspicuously",
         pos: "adv",
         meaning: "attracting attention",
-        synonyms: ["noticeably"],
+        syn: ["noticeably"],
         examples: [
           "The attorneys were conspicuous for their aggressive manner in the courtroom.",
         ],
@@ -2695,21 +2695,21 @@ export const data = [
         word: "demand",
         pos: "v",
         meaning: "to ask for something in a strong way",
-        synonyms: ["insist"],
+        syn: ["insist"],
         examples: ["She demanded to know the truth."],
       },
       {
         word: "endorse",
         pos: "v",
         meaning: "to express approval",
-        synonyms: ["support"],
+        syn: ["support"],
         examples: ["The union endorsed the new contract."],
       },
       {
         word: "enormous",
         pos: "adj",
         meaning: "very large",
-        synonyms: ["tremendous"],
+        syn: ["tremendous"],
         examples: [
           "His enormous wealth allows him to contribute to many charities.",
         ],
@@ -2718,7 +2718,7 @@ export const data = [
         word: "entirely",
         pos: "adv",
         meaning: "completely",
-        synonyms: ["thoroughly"],
+        syn: ["thoroughly"],
         examples: [
           "The president released the speech in its entirety before the news conference.",
         ],
@@ -2727,7 +2727,7 @@ export const data = [
         word: "erode",
         pos: "v",
         meaning: "to wear away, disappear slowly",
-        synonyms: ["deteriorate"],
+        syn: ["deteriorate"],
         examples: [
           "The senator’s support is eroding because of his unpopular positions on the major issues.",
         ],
@@ -2736,7 +2736,7 @@ export const data = [
         word: "evaporate",
         pos: "v",
         meaning: "to vanish",
-        synonyms: ["disappear"],
+        syn: ["disappear"],
         examples: [
           "The chances of the two sides reaching an agreement have evaporated.",
         ],
@@ -2745,14 +2745,14 @@ export const data = [
         word: "recover",
         pos: "v",
         meaning: "to get back; to have something returned",
-        synonyms: ["retrieve"],
+        syn: ["retrieve"],
         examples: ["The NASA team was unable to recover the space capsule."],
       },
       {
         word: "reportedly",
         pos: "adv",
         meaning: "to know by report; unconfirmed",
-        synonyms: ["rumored"],
+        syn: ["rumored"],
         examples: [
           "The students reportedly sent a representative, but she has not arrived yet.",
         ],
@@ -2761,108 +2761,110 @@ export const data = [
         word: "shift",
         pos: "n",
         meaning: "change in position or direction",
-        synonyms: ["switch"],
+        syn: ["switch"],
         examples: ["The shift in the wind was helpful to the sailors."],
       },
       {
         word: "suffer",
         pos: "v",
         meaning: "to experience difficulty; to worsen in quality",
-        synonyms: ["endure"],
+        syn: ["endure"],
         examples: [
           "Many families experience the suffering of difficult economic times.",
         ],
       },
     ],
-    matching: [
-      {
-        question: "Choose the synonym for 'benefit':",
-        options: ["prosper", "demand", "assist", "distinguish"],
-        answer: "assist",
-      },
-      {
-        question: "Choose the synonym for 'noticeably':",
-        options: ["constantly", "enormously", "conspicuously", "broadly"],
-        answer: "conspicuously",
-      },
-      {
-        question: "Choose the synonym for 'rumored':",
-        options: ["routinely", "purposefully", "comparatively", "reportedly"],
-        answer: "reportedly",
-      },
-      {
-        question: "Choose the synonym for 'blind':",
-        options: ["oblivious", "visible", "sensitive", "shifting"],
-        answer: "oblivious",
-      },
-      {
-        question: "Choose the synonym for 'thrive':",
-        options: ["exaggerate", "burgeon", "dominate", "endorse"],
-        answer: "burgeon",
-      },
-      {
-        question: "Choose the synonym for 'endure':",
-        options: ["suffer", "erode", "release", "disappear"],
-        answer: "suffer",
-      },
-      {
-        question: "Choose the synonym for 'broaden':",
-        options: ["impress", "elicit", "reveal", "enlarge"],
-        answer: "enlarge",
-      },
-      {
-        question: "Choose the synonym for 'switch':",
-        options: ["enrich", "shift", "propose", "support"],
-        answer: "shift",
-      },
-      {
-        question: "Choose the synonym for 'retrieve':",
-        options: ["recover", "deteriorate", "disperse", "relinquish"],
-        answer: "recover",
-      },
-      {
-        question: "Choose the synonym for 'insist':",
-        options: ["demand", "mention", "disperse", "intrigue"],
-        answer: "demand",
-      },
-    ],
-    testQuestions: [
-      {
-        question:
-          "The candidate’s support evaporated after the announcement of his program reached the newspapers and television news programs.",
-        options: ["burgeoned", "suffered", "broadened", "disappeared"],
-        answer: "disappeared",
-      },
-      {
-        question:
-          "The president’s popularity has eroded since the publication of a recent newspaper article.",
-        options: ["recovered", "shifted", "intensified", "deteriorated"],
-        answer: "deteriorated",
-      },
-      {
-        question:
-          "The natural forest vegetation has entirely disappeared from the landscape.",
-        options: ["slowly", "reportedly", "completely", "conspicuously"],
-        answer: "completely",
-      },
-      {
-        question:
-          "Lightning is electricity that is discharged as an enormous spark, hitting the closest spot on the ground.",
-        options: ["a mighty", "a tremendous", "a blinding", "a terrifying"],
-        answer: "a tremendous",
-      },
-      {
-        question:
-          "The trade unions worked hard for an agreement that would be endorsed by their members.",
-        options: [
-          "demanded by",
-          "supported by",
-          "attractive to",
-          "of benefit to",
-        ],
-        answer: "supported by",
-      },
-    ],
+    tests: {
+      matching: [
+        {
+          question: "Choose the synonym for 'benefit':",
+          options: ["prosper", "demand", "assist", "distinguish"],
+          answer: "assist",
+        },
+        {
+          question: "Choose the synonym for 'noticeably':",
+          options: ["constantly", "enormously", "conspicuously", "broadly"],
+          answer: "conspicuously",
+        },
+        {
+          question: "Choose the synonym for 'rumored':",
+          options: ["routinely", "purposefully", "comparatively", "reportedly"],
+          answer: "reportedly",
+        },
+        {
+          question: "Choose the synonym for 'blind':",
+          options: ["oblivious", "visible", "sensitive", "shifting"],
+          answer: "oblivious",
+        },
+        {
+          question: "Choose the synonym for 'thrive':",
+          options: ["exaggerate", "burgeon", "dominate", "endorse"],
+          answer: "burgeon",
+        },
+        {
+          question: "Choose the synonym for 'endure':",
+          options: ["suffer", "erode", "release", "disappear"],
+          answer: "suffer",
+        },
+        {
+          question: "Choose the synonym for 'broaden':",
+          options: ["impress", "elicit", "reveal", "enlarge"],
+          answer: "enlarge",
+        },
+        {
+          question: "Choose the synonym for 'switch':",
+          options: ["enrich", "shift", "propose", "support"],
+          answer: "shift",
+        },
+        {
+          question: "Choose the synonym for 'retrieve':",
+          options: ["recover", "deteriorate", "disperse", "relinquish"],
+          answer: "recover",
+        },
+        {
+          question: "Choose the synonym for 'insist':",
+          options: ["demand", "mention", "disperse", "intrigue"],
+          answer: "demand",
+        },
+      ],
+      questions: [
+        {
+          question:
+            "The candidate’s support evaporated after the announcement of his program reached the newspapers and television news programs.",
+          options: ["burgeoned", "suffered", "broadened", "disappeared"],
+          answer: "disappeared",
+        },
+        {
+          question:
+            "The president’s popularity has eroded since the publication of a recent newspaper article.",
+          options: ["recovered", "shifted", "intensified", "deteriorated"],
+          answer: "deteriorated",
+        },
+        {
+          question:
+            "The natural forest vegetation has entirely disappeared from the landscape.",
+          options: ["slowly", "reportedly", "completely", "conspicuously"],
+          answer: "completely",
+        },
+        {
+          question:
+            "Lightning is electricity that is discharged as an enormous spark, hitting the closest spot on the ground.",
+          options: ["a mighty", "a tremendous", "a blinding", "a terrifying"],
+          answer: "a tremendous",
+        },
+        {
+          question:
+            "The trade unions worked hard for an agreement that would be endorsed by their members.",
+          options: [
+            "demanded by",
+            "supported by",
+            "attractive to",
+            "of benefit to",
+          ],
+          answer: "supported by",
+        },
+      ],
+    },
   },
   {
     lessonName: "Lesson 13",
@@ -4368,7 +4370,7 @@ export const data = [
         syn: ["register"],
         examples: [
           "The coldest temperatures in the United States have been recorded at International Falls, Minnesota.",
-          "Many businesses are using recordings to answer consumer questions.",
+          "Many businesses are using recordings to answer consumer.",
         ],
       },
       {
@@ -5099,7 +5101,7 @@ export const data = [
         syn: ["survey"],
         examples: [
           "The poll indicated that conservation of the environment was the number one issue with college students.",
-          "The pollster asked the questions in a nonpartisan manner.",
+          "The pollster asked her in a nonpartisan manner.",
         ],
       },
       {
@@ -5295,7 +5297,7 @@ export const data = [
         syn: ["likely"],
         examples: [
           "Most liquids are prone to contain water from the air.",
-          "She is prone to study hard the night before her tests.",
+          "She is prone to study hard the night before her test.",
         ],
       },
       {
@@ -6449,52 +6451,52 @@ export const data = [
     tests: {
       matching: [
         {
-          word: "Curative",
+          question: "Choose the synonym for Curative",
           options: ["Healing", "Gratifying", "Toxic", "Conceivable"],
           answer: "Healing",
         },
         {
-          word: "Limited",
+          question: "Choose the synonym for Limited",
           options: ["Sustained", "Ample", "Finite", "Approximate"],
           answer: "Finite",
         },
         {
-          word: "Amusement",
+          question: "Choose the synonym for Amusement",
           options: ["Peacefulness", "Demonstration", "Diversion", "Marvel"],
           answer: "Diversion",
         },
         {
-          word: "Security",
+          question: "Choose the synonym for Security",
           options: ["Power", "Safety", "Trap", "Cure"],
           answer: "Safety",
         },
         {
-          word: "Debilitating",
+          question: "Choose the synonym for Debilitating",
           options: ["Convincing", "Formidable", "Accelerating", "Weakening"],
           answer: "Weakening",
         },
         {
-          word: "Aggravate",
+          question: "Choose the synonym for Aggravate",
           options: ["Irritate", "Convert", "Isolate", "Initiate"],
           answer: "Irritate",
         },
         {
-          word: "Conceivably",
+          question: "Choose the synonym for Conceivably",
           options: ["Absolutely", "Aptly", "Possibly", "Tranquilly"],
           answer: "Possibly",
         },
         {
-          word: "Alter",
+          question: "Choose the synonym for Alter",
           options: ["Sustain", "Launch", "Detect", "Convert"],
           answer: "Convert",
         },
         {
-          word: "Depleted",
+          question: "Choose the synonym for Depleted",
           options: ["Retained", "Consumed", "Polluted", "Inundated"],
           answer: "Consumed",
         },
         {
-          word: "Perceive",
+          question: "Choose the synonym for Perceive",
           options: ["Deny", "Miscalculate", "Observe", "Estimate"],
           answer: "Observe",
         },

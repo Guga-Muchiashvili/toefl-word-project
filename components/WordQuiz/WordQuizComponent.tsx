@@ -10,6 +10,11 @@ const SynonymQuiz: React.FC = () => {
   const [score, setScore] = useState<number | null>(null);
   const [showAnswers, setShowAnswers] = useState<boolean>(false);
 
+  type SimpleWord = {
+    word: string;
+    syn: string[];
+  };
+
   const router = useRouter();
 
   useEffect(() => {
@@ -36,8 +41,10 @@ const SynonymQuiz: React.FC = () => {
 
     wordsToGuess.forEach((word, index) => {
       const correctSynonyms =
-        data.flatMap((lesson) => lesson.words).find((w) => w.word === word)
-          ?.syn || [];
+        data
+          .flatMap((lesson) => lesson.words as SimpleWord[])
+          .find((w) => w.word === word)?.syn || [];
+
       if (correctSynonyms.includes(userAnswers[index].toLowerCase())) {
         calculatedScore++;
       }
@@ -83,8 +90,8 @@ const SynonymQuiz: React.FC = () => {
                 <p className="text-green-600 mt-2">
                   Correct synonym(s):{" "}
                   {data
-                    .flatMap((lesson) => lesson.words)
-                    .find((w) => w.word === word)
+                    .flatMap((lesson) => lesson.words as SimpleWord[])
+                    .find((w) => w.word === word && "syn" in w)
                     ?.syn.join(", ") || "None"}
                 </p>
               )}
