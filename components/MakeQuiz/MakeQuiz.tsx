@@ -20,7 +20,6 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   useEffect(() => {
     const createQuiz = () => {
       const questions = generateQuizQuestions(quizType);
-      console.log(questions);
       setQuizQuestions(questions);
       setSelectedOptions(Array(questions.length).fill(""));
     };
@@ -50,6 +49,9 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
   const handleRestart = () => {
     setSelectedOptions(Array(quizQuestions.length).fill(""));
     setScore(null);
+    console.log("here");
+    const questions = generateQuizQuestions(quizType);
+    setQuizQuestions(questions);
     setShowAnswers(false);
   };
 
@@ -131,22 +133,22 @@ const MakeQuiz: React.FC<MakeQuizProps> = ({ quizType }) => {
               Your score: {score} / {quizQuestions.length}
             </div>
           )}
-          {showAnswers && (
-            <div className="flex gap-6 mt-6">
+          <div className="flex gap-6 mt-6">
+            {showAnswers && (
               <button
                 className="px-6 py-2 bg-blue-600 text-white text-lg font-semibold rounded-xl hover:bg-blue-800 transition-all duration-200"
                 onClick={handleRestart}
               >
                 Restart Quiz
               </button>
-              <button
-                className="px-6 py-2 bg-gray-600 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200"
-                onClick={handleGoBack}
-              >
-                Go Back
-              </button>
-            </div>
-          )}
+            )}
+            <button
+              className="px-6 py-2 bg-gray-600 text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-all duration-200"
+              onClick={handleGoBack}
+            >
+              Go Back
+            </button>
+          </div>
         </div>
       </div>
     </div>

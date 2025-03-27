@@ -57,6 +57,12 @@ const SynonymQuiz: React.FC = () => {
   const handleRestart = () => {
     setScore(null);
     setShowAnswers(false);
+    const allWords = data.flatMap((lesson) =>
+      lesson.words.map((word) => word.word)
+    );
+    const randomWords = allWords.sort(() => Math.random() - 0.5).slice(0, 10);
+    console.log("here");
+    setWordsToGuess(randomWords);
     setUserAnswers(Array(10).fill(""));
   };
 
@@ -100,7 +106,7 @@ const SynonymQuiz: React.FC = () => {
         </div>
         <div className="mt-6 flex flex-col items-center">
           <button
-            className={`px-6 py-3 rounded-lg text-lg font-semibold ${
+            className={`px-6 py-3 rounded-xl text-lg font-semibold ${
               showAnswers
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-purple-600 text-white hover:bg-purple-700"
@@ -115,22 +121,22 @@ const SynonymQuiz: React.FC = () => {
               Your score: {score} / {wordsToGuess.length}
             </div>
           )}
-          {showAnswers && (
-            <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6">
+            {showAnswers && (
               <button
-                className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                className="px-6 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-600"
                 onClick={handleRestart}
               >
                 Restart Quiz
               </button>
-              <button
-                className="px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
-                onClick={handleGoBack}
-              >
-                Go Back
-              </button>
-            </div>
-          )}
+            )}
+            <button
+              className="px-6 py-2 rounded-xl bg-gray-500 text-white  hover:bg-gray-600"
+              onClick={handleGoBack}
+            >
+              Go Back
+            </button>
+          </div>
         </div>
       </div>
     </div>

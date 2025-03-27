@@ -443,7 +443,7 @@ export const data = [
         {
           question: "Choose the synonym for 'refine':",
           options: ["persist", "value", "perfect", "divide"],
-          answer: "value",
+          answer: "perfect",
         },
         {
           question: "Choose the synonym for 'distribute':",
